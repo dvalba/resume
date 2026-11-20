@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae — David Alba</title>
+    <meta name="description" content="David Alba — Científico de la Computación | Ingeniero Full-stack e IA. Currículum.">
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 18mm;
+            background-color: #ffffff;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            background-color: #ffffff;
+            margin: 0 auto;
+            padding: 20px 0;
+            max-width: 800px;
+            font-size: 10.5pt;
+            line-height: 1.5;
+        }
+
+        .cv-header {
+            border-bottom: 3px solid #0f172a;
+            padding-bottom: 16px;
+            margin-bottom: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .cv-header .name-title h1 {
+            margin: 0 0 6px 0;
+            font-size: 24pt;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            line-height: 1.15;
+        }
+
+        .cv-header .name-title .subtitle {
+            margin: 0;
+            font-size: 12pt;
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .cv-header .contact-info {
+            text-align: right;
+            font-size: 9.5pt;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .cv-header .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        section {
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 4px;
+            margin: 0 0 12px 0;
+            page-break-after: avoid;
+        }
+
+        .profile-text {
+            margin: 0;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* Educación */
+        .education-item {
+            margin-bottom: 8px;
+        }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10.5pt;
+            color: #0f172a;
+        }
+        .edu-date {
+            font-weight: 600;
+            color: #2563eb;
+            font-size: 9.5pt;
+            white-space: nowrap;
+        }
+        .edu-institution {
+            color: #475569;
+            font-size: 9.5pt;
+            margin-top: 2px;
+        }
+
+        /* Experiencia */
+        .job-item {
+            margin-bottom: 10px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10.5pt;
+            color: #0f172a;
+        }
+        .job-bullets {
+            margin: 5px 0 0 0;
+            padding-left: 18px;
+            color: #334155;
+        }
+        .job-bullets li {
+            margin-bottom: 4px;
+        }
+
+        /* Habilidades */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+
+        .skills-table td {
+            padding: 4px 0;
+            vertical-align: top;
+            font-size: 10pt;
+        }
+
+        .skills-table .cat {
+            width: 30%;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .skills-table .items {
+            width: 70%;
+            color: #334155;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 9pt;
+            margin-right: 5px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .badge.highlight {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border-color: #bfdbfe;
+            font-weight: 600;
+        }
+
+        /* Proyectos */
+        .project-group-title {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 14px 0 8px 0;
+            page-break-after: avoid;
+        }
+
+        .project-list {
+            margin: 0;
+            padding-left: 18px;
+            list-style-type: square;
+        }
+
+        .project-list li {
+            margin-bottom: 8px;
+            color: #334155;
+            page-break-inside: avoid;
+        }
+
+        .project-list li strong {
+            color: #0f172a;
+        }
+
+        .project-list li a {
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 9pt;
+        }
+
+        @media screen {
+            body {
+                padding: 40px;
+                background-color: #f8fafc;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            html {
+                background-color: #e2e8f0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cv-header">
+        <div class="name-title">
+            <h1>David Alba</h1>
+            <p class="subtitle">Científico de la Computación | Ingeniero Full-stack e IA</p>
+        </div>
+        <div class="contact-info">
+            <div>La Habana, Cuba — disponible para trabajo remoto</div>
+            <div><a href="/">English</a> · Español</div>
+            <div><a href="https://github.com/dvalba" target="_blank">github.com/dvalba</a></div>
+            <div><a href="https://www.linkedin.com/in/dvalba" target="_blank">linkedin.com/in/dvalba</a></div>
+            <div><a href="mailto:david2001.004@gmail.com">david2001.004@gmail.com</a></div>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">Perfil Profesional</h2>
+        <p class="profile-text">
+            Científico de la Computación e ingeniero de IA con sólida formación académica y experiencia práctica
+            en desarrollo de software, arquitectura de sistemas y resolución de problemas complejos. Construyo
+            productos web y móviles de extremo a extremo — desde backends con FastAPI y NestJS hasta frontends
+            con Angular, React y Flutter — con enfoque en arquitectura limpia e IA integrada en flujos de
+            trabajo reales.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Experiencia</h2>
+        <div class="job-item">
+            <div class="job-header">
+                <strong>Tecnomatica — Ingeniero de IA</strong>
+                <span class="edu-date">Junio 2026 — Actualidad</span>
+            </div>
+            <div class="edu-institution">La Habana, Cuba</div>
+            <ul class="job-bullets">
+                <li>Desarrollo de <strong>Innovia</strong>, una plataforma para la captura de ideas de innovación y
+                    su evaluación con IA (FastAPI, Angular, Ollama) —
+                    <a href="https://github.com/dvalba/innovia" target="_blank">github.com/dvalba/innovia</a></li>
+                <li>Construcción de <strong>Nodo Trace</strong>, una plataforma de trazabilidad de cadena de
+                    suministro con seguimiento en tiempo real de productos a través de proveedores y etapas
+                    (NestJS) —
+                    <a href="https://github.com/dvalba/nodoo-trace" target="_blank">github.com/dvalba/nodoo-trace</a></li>
+                <li>Desarrollo de extremo a extremo de plataformas web impulsadas por IA en flujos de trabajo
+                    reales (Python, TypeScript, NestJS, Angular).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Educación</h2>
+        <div class="education-item">
+            <div class="edu-header">
+                <strong>Licenciatura en Ciencia de la Computación (B.Sc. in Computer Science)</strong>
+                <span class="edu-date">Graduado en 2025</span>
+            </div>
+            <div class="edu-institution">Universidad de La Habana — Facultad de Matemática y Computación</div>
+            <div class="edu-institution">Inglés: A2 (Elemental)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <table class="skills-table">
+            <tr>
+                <td class="cat">Desarrollo Web</td>
+                <td class="items">
+                    <span class="badge highlight">Angular</span>
+                    <span class="badge highlight">TypeScript</span>
+                    <span class="badge highlight">React</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">NestJS</span>
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">Tailwind</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat">Móvil</td>
+                <td class="items">
+                    <span class="badge highlight">Flutter</span>
+                    <span class="badge">Dart</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat">Backend / Lenguajes</td>
+                <td class="items">
+                    <span class="badge highlight">Python (FastAPI)</span>
+                    <span class="badge highlight">C# / .NET</span>
+                    <span class="badge">C</span>
+                    <span class="badge">Haskell</span>
+                    <span class="badge">Java</span>
+                    <span class="badge">SQL</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat">Sistemas / Bajo Nivel</td>
+                <td class="items">
+                    <span class="badge">Programación en C</span>
+                    <span class="badge">Concurrencia</span>
+                    <span class="badge">Sistemas Distribuidos</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat">IA / Datos</td>
+                <td class="items">
+                    <span class="badge highlight">Machine Learning</span>
+                    <span class="badge highlight">LLMs (Ollama)</span>
+                    <span class="badge">Inferencia en Dispositivo (TFLite)</span>
+                    <span class="badge">Procesamiento de Datos</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat">Herramientas</td>
+                <td class="items">
+                    <span class="badge">Git</span>
+                    <span class="badge">GitHub</span>
+                    <span class="badge">Linux</span>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2 class="section-title">Proyectos Seleccionados</h2>
+
+        <div class="project-group-title">Web y Móvil</div>
+        <ul class="project-list">
+            <li>
+                <strong>Aegis (Flutter, Dart):</strong> Aplicación multiplataforma offline-first para el
+                seguimiento clínico de lesiones cutáneas — captura de lesiones, historial de pacientes y
+                clasificación asistida por IA de imágenes dermatoscópicas con puntaje de confianza. Proyecto de
+                diploma: diseño de la arquitectura offline-first con sincronización automática de datos e
+                imágenes clínicas. Arquitectura limpia, Riverpod, Isar; inferencia de ML en el dispositivo
+                (TFLite).
+                <a href="https://github.com/dvalba/Aegis" target="_blank">github.com/dvalba/Aegis</a>
+            </li>
+            <li>
+                <strong>Innovia (FastAPI, Angular, Ollama):</strong> Plataforma web para la captura de ideas de
+                innovación y su evaluación con IA en flujos de trabajo reales.
+                <a href="https://github.com/dvalba/innovia" target="_blank">github.com/dvalba/innovia</a>
+            </li>
+            <li>
+                <strong>Nodo Trace (NestJS):</strong> Plataforma de trazabilidad de cadena de suministro
+                desarrollada en la hackathon AvaCode (Avangenio) — seguimiento en tiempo real de productos a
+                través de proveedores y etapas.
+                <a href="https://github.com/dvalba/nodoo-trace" target="_blank">github.com/dvalba/nodoo-trace</a>
+            </li>
+            <li>
+                <strong>Villa Los Reyes (TypeScript):</strong> Sitio web oficial de un hostal en Viñales, Cuba —
+                galería, servicios y diseño moderno y responsivo.
+                <a href="https://github.com/dvalba/villa-los-reyes" target="_blank">github.com/dvalba/villa-los-reyes</a>
+            </li>
+        </ul>
+
+        <div class="project-group-title">Ciencia de la Computación y Sistemas</div>
+        <ul class="project-list">
+            <li>
+                <strong>Template Engine (Haskell, Parsec):</strong> Motor de plantillas funcional con sintaxis
+                tipo Jinja — bucles, condicionales y un evaluador completo de expresiones.
+                <a href="https://github.com/dvalba/Template_Engine" target="_blank">github.com/dvalba/Template_Engine</a>
+            </li>
+            <li>
+                <strong>Hulk Compiler &amp; Compiler Design Labs (Python):</strong> Compilador completo (lexer,
+                parser, intérprete) para el lenguaje Hulk, más laboratorios avanzados sobre diseño y
+                construcción de compiladores.
+                <a href="https://github.com/dvalba/Hulk-Compiler" target="_blank">github.com/dvalba/Hulk-Compiler</a>
+            </li>
+            <li>
+                <strong>Web Server &amp; Shell from scratch (C):</strong> Servidor web minimalista e intérprete de
+                comandos (shell) implementados desde cero en C.
+                <a href="https://github.com/dvalba/webServer-in-c" target="_blank">github.com/dvalba/webServer-in-c</a>
+            </li>
+        </ul>
+
+        <div class="project-group-title">Inteligencia Artificial</div>
+        <ul class="project-list">
+            <li>
+                <strong>Deep Face Recognition (Python):</strong> Sistema de reconocimiento facial construido con
+                deep learning, desarrollado con Python y notebooks de Jupyter.
+                <a href="https://github.com/dvalba/deep_face_recognition" target="_blank">github.com/dvalba/deep_face_recognition</a>
+            </li>
+            <li>
+                <strong>MovieSuggest (Python):</strong> Motor y sistema de recomendación de películas.
+                <a href="https://github.com/dvalba/MovieSuggest" target="_blank">github.com/dvalba/MovieSuggest</a>
+            </li>
+        </ul>
+    </section>
+
+</body>
+</html>
